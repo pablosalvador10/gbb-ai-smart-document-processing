@@ -4,7 +4,7 @@ Azure AI offers advanced capabilities for document classification, enabling ente
 
 We will explore the latest technologies and approaches, helping you make informed decisions to leverage advanced Optical Character Recognition (OCR), Named Entity Recognition (NER), summarization, vectorization, and indexing to make your data searchable.
 
-For more context and a detailed explanation, please refer to the full blog post [here]().
+For more context and a detailed explanation, please refer to the full blog post [here](https://pabloaicorner.hashnode.dev/modernize-your-document-management-with-azure-ai-and-generative-ai-advance-ocr-intelligent-tagging-and-ner).
 
 ## 🧭 Guide to Decision-Making 
 
