@@ -4,35 +4,33 @@ Azure AI offers advanced capabilities for document classification, enabling ente
 
 We will explore the latest technologies and approaches, helping you make informed decisions to leverage advanced Optical Character Recognition (OCR), Named Entity Recognition (NER), summarization, vectorization, and indexing to make your data searchable.
 
-For more context and a detailed explanation, please refer to the full blog post. [here]()
+For more context and a detailed explanation, please refer to the full blog post [here]().
 
 ## 🧭 Guide to Decision-Making 
 
 Choosing the right technology is crucial in engineering decision-making. Refer to the mind map below for guidance on aligning your needs with the best approach.
 
-![Mind Map](utils\images\image.png)
+![Mind Map](utils/images/image.png)
 
 Below are the approaches to various technologies and methods, each linked to a corresponding notebook for detailed code examples and evaluation methodology.
 
-1. **Define Your Success Thresholds**
+### 1. Define Your Success Thresholds
 
-    a. **Evaluation Criteria**: Learn how to choose the right methodology to compare multiple approaches using quality metrics like accuracy. For a multiclass problem like our use case, see the code [here](01-build-evaluation-methodology.ipynb).
+- **Evaluation Criteria**: Learn how to choose the right methodology to compare multiple approaches using quality metrics like accuracy. For a multiclass problem like our use case, see the code [here](01-build-evaluation-methodology.ipynb).
 
-2. **Document Classification (OCR)**
+### 2. Document Classification (OCR)
 
-    a. **OCR + LLM**: First, scan the document using OCR, then pass it to an LLM/SLM for extracting the targeted information. See the code [here](04-classification-document-ocr-llm.ipynb).
+- **OCR + LLM**: First, scan the document using OCR, then pass it to an LLM/SLM for extracting the targeted information. See the code [here](04-classification-document-ocr-llm.ipynb).
+- **Leveraging Multimodality**: Utilize advanced multimodal models like GPT-4 Omni or Phi-3 Vision that can directly accept images for classification. See the code [here](02-classification-document-llm-slm-multimodal.ipynb).
+- **Fine-Tuning Neural Document Intelligence Models**: Fine-tune pre-trained Azure AI Document Intelligence models with your own data for improved accuracy. See the code [here](03-classification-custom-document-intelligence.ipynb).
 
-    b. **Leveraging Multimodality**: Utilize advanced multimodal models like GPT-4 Omni or Phi-3 Vision that can directly accept images for classification. See the code [here](02-classification-document-llm-slm-multimodal.ipynb).
+### 3. Extracting Content
 
-    c. **Fine-Tuning Neural Document Intelligence Models**: Fine-tune pre-trained Azure AI Document Intelligence models with your own data for improved accuracy. See the code [here](03-classification-custom-document-intelligence.ipynb).
+- **Leveraging Multimodality**: Utilize advanced multimodal models like GPT-4 Omni to extract content and summarize per document. See the code [here](05-entity-extraction-document-intelligence.ipynb).
 
-3. **Extracting Content**
+### 4. Make Your Data Searchable
 
-    a. **Leveraging Multimodality**: Utilize advanced multimodal models like GPT-4 Omni to extract content and summarize per document. See the code [here](05-entity-extraction-document-intelligence.ipynb).
-
-4. **Make Your Data Searchable**
-
-    a. **Vectorization and Indexing**: Use Azure OpenAI to vectorize and the Push SDK to index documents into Azure AI Search, enabling state-of-the-art retrieval approaches and advanced search capabilities. See the code [here](06-make-your-data-searchable.ipynb).
+- **Vectorization and Indexing**: Use Azure OpenAI to vectorize and the Push SDK to index documents into Azure AI Search, enabling state-of-the-art retrieval approaches and advanced search capabilities. See the code [here](06-make-your-data-searchable.ipynb).
 
 ## 📂 Case Study: Making Your Enterprise Unlabeled Document Archives Searchable
 
@@ -42,7 +40,7 @@ Enterprises often have millions of unprocessed documents in their archives, lead
 
 ### Data
 
-We use the RVL-CDIP dataset, consisting of 400,000 grayscale images in 16 classes. For this prototype, we selected 100 samples per class, split into 70% for training and 30% for validation.For more information about the RVL-CDIP dataset, please refer to the (dataset page)[https://huggingface.co/datasets/aharley/rvl_cdip] on Hugging Face 📚
+We use the RVL-CDIP dataset, consisting of 400,000 grayscale images in 16 classes. For this prototype, we selected 100 samples per class, split into 70% for training and 30% for validation. For more information about the RVL-CDIP dataset, please refer to the [dataset page](https://huggingface.co/datasets/aharley/rvl_cdip) on Hugging Face 📚.
 
 ### Solution
 
@@ -61,7 +59,6 @@ We use the RVL-CDIP dataset, consisting of 400,000 grayscale images in 16 classe
    - Index and vectorize the JSON containing the key information and summarization per document into Azure AI Search.
    - This allows your enterprise to query the documents in a "Bing-like" manner and make your previously unlabeled data searchable.
    - See the code [here](06-make-your-data-searchable.ipynb).
-
 
 ## 📚 Resources
 
