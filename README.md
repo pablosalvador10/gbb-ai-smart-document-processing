@@ -36,7 +36,9 @@ Below are the approaches to various technologies and methods, each linked to a c
 
 ### Problem
 
-Enterprises often have millions of unprocessed documents in their archives, leading to inefficiencies. Our goal is to categorize these documents into 16 initial categories, enabling chat functionality, key information extraction, and data understanding. We aim to make this data searchable using Azure AI Search with high relevance scores.
+Enterprises often have millions of documents stored in their archives. These documents are typically unprocessed or manually processed, leading to inefficiencies and potential human error. Our objective is to categorize ("tag") these documents into 16 initial categories using fine-tuned neural document intelligence models.
+
+Once classified, we will focus on the documents labeled as invoices and enable a "chat with your invoices" functionality. This involves addressing OCR (Optical Character Recognition), classification, and NER (Named Entity Recognition) challenges simultaneously. By doing so, companies can efficiently tag their documentation, vectorize it, and index it into a vector database, making their data easily searchable.
 
 ### Data
 
