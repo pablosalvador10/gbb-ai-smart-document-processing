@@ -74,6 +74,11 @@ remove_conda_env:
 	@echo "Removing conda environment"
 	conda env remove --name $(CONDA_ENV)
 
+# Target to start the AutoGen Studio UI
+start_studio:
+	@echo "Starting AutoGen Studio UI"
+	autogenstudio ui --port 8081
+
 run_pylint:
 	@echo "Running linter"
 	find . -type f -name "*.py" ! -path "./tests/*" | xargs pylint -disable=logging-fstring-interpolation > utils/pylint_report/pylint_report.txt
